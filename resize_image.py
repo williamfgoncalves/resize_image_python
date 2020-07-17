@@ -5,8 +5,8 @@ import os
 
 def main():
 
-	IN_PATH = "/c/Users/william.goncalves.CWINET/Documents/Pessoal/topicos_avancados_2/in_img"
-	OUT_PATH = "/c/Users/william.goncalves.CWINET/Documents/Pessoal/topicos_avancados_2/out_img"
+	IN_PATH = os.path.join(os.getcwd(), "/in_img")
+	OUT_PATH = os.path.join(os.getcwd(), "/out_img")
 
 	for image_name in os.listdir(IN_PATH):
 		im = cv2.imread(os.path.join(IN_PATH, image_name))
